@@ -176,9 +176,9 @@ tbody tr.bh td{font-weight:500;font-size:10px;color:var(--navy);padding:7px 12px
 tbody td{padding:9px 12px;color:var(--text);vertical-align:middle;line-height:1.45;}
 td.tc{text-align:center;}
 .pill{display:inline-block;font-size:10px;padding:2px 9px;border-radius:20px;font-weight:500;white-space:nowrap;}
-.pill-i{background:var(--ind-bg);color:var(--ind);border:1px solid #DCA0A0;}
-.pill-n{background:var(--nec-bg);color:var(--nec);border:1px solid #B8D890;}
-.pill-d{background:var(--des-bg);color:var(--des);border:1px solid #DFC070;}
+.pill-i{background:#D6F1FB;color:#005A80;border:1px solid #08B0EE;}
+.pill-n{background:#EBF5D0;color:#3A5A10;border:1px solid #98C43B;}
+.pill-d{background:#EBEBEB;color:#4A5560;border:1px solid #BAC8D0;}
 .pill-x{color:var(--text-l);font-size:14px;}
 
 /* STATIC LEGEND BOX */
@@ -264,20 +264,20 @@ footer{background:var(--navy2);padding:1.4rem;}
       <div class="farol-title">Como interpretar o resultado</div>
       <div class="farol-items">
         <div class="farol-item">
-          <div class="farol-dot" style="background:var(--ind)"></div>
+          <div class="farol-dot" style="background:#8A9AA5"></div>
           <div class="farol-label"><strong>Condição indispensável não atendida</strong> <span>— A avaliação é inviável no momento, independentemente das demais condições. É preciso resolver o ponto identificado antes de avançar.</span></div>
         </div>
         <div class="farol-item">
           <div class="farol-dot" style="background:var(--nec)"></div>
-          <div class="farol-label"><strong>Viável</strong> <span>— As condições necessárias estão majoritariamente atendidas (≥ 75%). A avaliação pode ser conduzida, com atenção às condições desejáveis indicadas.</span></div>
+          <div class="farol-label"><strong>Viável</strong> <span>— As condições importantes estão majoritariamente atendidas (≥ 75%). A avaliação pode ser conduzida, com atenção às condições desejáveis indicadas.</span></div>
         </div>
         <div class="farol-item">
           <div class="farol-dot" style="background:var(--des)"></div>
-          <div class="farol-label"><strong>Parcialmente viável</strong> <span>— Entre 40% e 74% das condições necessárias estão atendidas. A avaliação é possível com ajustes de escopo ou prazo, ou após resolver as lacunas identificadas.</span></div>
+          <div class="farol-label"><strong>Parcialmente viável</strong> <span>— Entre 40% e 74% das condições importantes estão atendidas. A avaliação é possível com ajustes de escopo ou prazo, ou após resolver as lacunas identificadas.</span></div>
         </div>
         <div class="farol-item">
           <div class="farol-dot" style="background:var(--ind)"></div>
-          <div class="farol-label"><strong>Inviável no momento</strong> <span>— Menos de 40% das condições necessárias estão atendidas. Recomenda-se construir as bases antes de avançar com essa modalidade.</span></div>
+          <div class="farol-label"><strong>Inviável no momento</strong> <span>— Menos de 40% das condições importantes estão atendidas. Recomenda-se construir as bases antes de avançar com essa modalidade.</span></div>
         </div>
       </div>
     </div>
@@ -368,9 +368,9 @@ footer{background:var(--navy2);padding:1.4rem;}
     <div class="legend-box">
       <div class="legend-box-title">Legenda</div>
       <div class="legend-box-items">
-        <div class="legend-box-item"><span class="pill pill-i">🔴 Indispensável</span><span>— se não atendida, a avaliação não deve ser iniciada.</span></div>
-        <div class="legend-box-item"><span class="pill pill-n">🟢 Importante</span><span>— sua ausência reduz a viabilidade da avaliação. Quando não disponível, deve ser planejada antes ou nas etapas iniciais da avaliação.</span></div>
-        <div class="legend-box-item"><span class="pill pill-d">🟡 Desejável</span><span>— não é obrigatória, mas contribui para a qualidade e robustez da avaliação.</span></div>
+        <div class="legend-box-item"><span class="pill pill-i">Indispensável</span><span>— se não atendida, esta avaliação não deve ser iniciada.</span></div>
+        <div class="legend-box-item"><span class="pill pill-n">Importante</span><span>— sua ausência reduz a viabilidade desta avaliação. Quando não disponível, deve ser planejada antes ou nas etapas iniciais da avaliação em questão.</span></div>
+        <div class="legend-box-item"><span class="pill pill-d">Desejável</span><span>— não é obrigatória, mas contribui para a qualidade e robustez desta avaliação.</span></div>
         <div class="legend-box-item"><span class="legend-box-dash">—</span><span>Não se aplica a este tipo de avaliação.</span></div>
       </div>
     </div>
@@ -575,9 +575,9 @@ function updateResults(){
   });
 }
 
-const PI='<span class="pill pill-i">🔴 indispensável</span>';
-const PN='<span class="pill pill-n">🟢 importante</span>';
-const PD='<span class="pill pill-d">🟡 desejável</span>';
+const PI='<span class="pill pill-i">Indispensável</span>';
+const PN='<span class="pill pill-n">Importante</span>';
+const PD='<span class="pill pill-d">Desejável</span>';
 const PX='<span class="pill-x">—</span>';
 function pillFor(r){return r===I?PI:r===N?PN:r===D?PD:PX;}
 
